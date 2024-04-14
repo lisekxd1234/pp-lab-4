@@ -1,20 +1,18 @@
+import employees.Employee;
+import employees.Manager;
+import employees.Worker;
+
 public class Company {
     public static void main(String[] args) {
         // tworzy tablicę pracowników
         Employee[] employees = new Employee[5];
 
-        // dodaje pracowników do tablicy z nowymi imionami i nazwiskami
-        employees[0] = new Employee("Karol Bielecki", 3500);
-        employees[1] = new Employee("Julia Wojciechowska", 4200);
+        // dodaje pracowników do tablicy, uwzględniając nowe klasy
+        employees[0] = new Manager("Karol Bielecki", 3500, 0);
+        employees[1] = new Worker("Julia Wojciechowska", 4200, "Accountant");
         employees[2] = new Employee("Robert Łukasik", 3900);
         employees[3] = new Employee("Ewa Baran", 4700);
-        employees[4] = new Employee("Tomasz Leśniak", 3000);
-
-        // wyświetla informacje o pracowniku z indeksu 3
-        System.out.println("Dane pracownika o indeksie 3: " + employees[3]);
-
-        // modyfikuje wynagrodzenie pracownika o indeksie 3
-        employees[3].setSalary(5000);
+        employees[4] = new Worker("Tomasz Leśniak", 3000, "HR Specialist");
 
         // wyświetla informacje o wszystkich pracownikach
         System.out.println("Lista wszystkich pracowników:");
